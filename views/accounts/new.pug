@@ -1,0 +1,40 @@
+extends ../layout
+
+block content
+    h1 GET A FREE INTRO CLASS
+
+    form(method="POST")
+      .form-group
+        label(for="firstnameInput")
+        input.form-control#firstnameInput(
+          name="firstname"
+          type="name"
+          placeholder="First Name*"
+        )
+
+    form(method="POST")
+      .form-group
+        label(for="lastnameInput")
+        input.form-control#lastnameInput(
+          name="lastname"
+          type="name"
+          placeholder="Last Name*"
+        )
+    form(method="POST")
+      .form-group
+        label(for="usernameInput") 
+        input.form-control#usernameInput(
+          name="username"
+          type="email"
+          placeholder="Email*"
+        )
+        
+      .form-group
+        label(for="phone") 
+        input.form-control#phoneInput(
+          name="phone"
+          type="phone"
+          placeholder="Primary Phone*"
+        )
+        
+      button.btn.btn-primary(type="submit") Submit
