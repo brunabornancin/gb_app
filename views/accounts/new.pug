@@ -8,19 +8,18 @@ block content
         label(for="firstnameInput")
         input.form-control#firstnameInput(
           name="firstname"
-          type="name"
+          type="text"
           placeholder="First Name*"
         )
 
-    form(method="POST")
       .form-group
         label(for="lastnameInput")
         input.form-control#lastnameInput(
           name="lastname"
-          type="name"
+          type="text"
           placeholder="Last Name*"
         )
-    form(method="POST")
+    
       .form-group
         label(for="usernameInput") 
         input.form-control#usernameInput(
@@ -36,5 +35,15 @@ block content
           type="phone"
           placeholder="Primary Phone*"
         )
+
+      .form-group
+        label(for="heardaboutus") 
+        select#heardaboutus.select.form-control(name="heardaboutus") 
+          option(value="0", selected=true) How you heard about us?*
+          option(value="1") Social Media
+          option(value="2") Friends
+          option(value="3") Walk In
+          option(value="4") Other
+
         
       button.btn.btn-primary(type="submit") Submit

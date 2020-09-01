@@ -13,8 +13,17 @@ header
     #navbarCollapse.collapse.navbar-collapse
       ul.navbar-nav.mr-auto
         li.nav-item: a.nav-link(href="/") Home
-        li.nav-item: a.nav-link(href="#") About Us
-        li.nav-item: a.nav-link(href="#") Programs
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(id='aboutUs', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') About Us
+          .dropdown-menu(aria-labelledby='aboutUs')
+            a.dropdown-item(href="") GB Calgary
+            a.dropdown-item(href="") Instructors
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(id='programs', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Programs
+          .dropdown-menu(aria-labelledby='programs')
+            a.dropdown-item(href="") Adults
+            a.dropdown-item(href="") Kids & Teens
+            a.dropdown-item(href="") Private Training
         li.nav-item: a.nav-link(href="#") Events & News
         li.nav-item: a.nav-link(href="#") Gallery
         li.nav-item: a.nav-link(href="#") Contact
