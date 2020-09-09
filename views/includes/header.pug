@@ -1,31 +1,34 @@
 header
-  nav.navbar.navbar-expand-md.navbar-light.fixed-top.bg-white
-    a.navbar-brand(href="/") 
-      img(src="/images/logo.png", alt="logo", class="img-responsive", width="200px")
-    button.navbar-toggler(type="button"
-                          data-toggle="collapse"
-                          data-target="#navbarCollapse"
-                          aria-controls="navbarCollapse"
-                          aria-expanded="false"
-                          aria-label="Toggle navigation")
-      span.navbar-toggler-icon
+  nav.navbar.navbar-expand-md.fixed-top.custom-navbar
+    .container-fluid
+      a.navbar-brand(href="/") 
+        img(src="/images/logo.png", alt="logo", class="img-responsive", width="200px")
+      button.navbar-toggler(type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarCollapse"
+                            aria-controls="navbarCollapse"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation")
+        span.navbar-toggler-icon
 
-    #navbarCollapse.collapse.navbar-collapse
-      ul.navbar-nav.mr-auto
-        li.nav-item: a.nav-link(href="/") Home
-        li.nav-item.dropdown
-          a.nav-link.dropdown-toggle(id='aboutUs', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') About Us
-          .dropdown-menu(aria-labelledby='aboutUs')
-            a.dropdown-item(href="") GB Calgary
-            a.dropdown-item(href="") Instructors
-        li.nav-item.dropdown
-          a.nav-link.dropdown-toggle(id='programs', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Programs
-          .dropdown-menu(aria-labelledby='programs')
-            a.dropdown-item(href="") Adults
-            a.dropdown-item(href="") Kids & Teens
-            a.dropdown-item(href="") Private Training
-        li.nav-item: a.nav-link(href="#") Events & News
-        li.nav-item: a.nav-link(href="#") Gallery
-        li.nav-item: a.nav-link(href="#") Contact
+      #navbarCollapse.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.ml-3: a.nav-link(href="/") Home
+          li.nav-item.dropdown.ml-3
+            a.nav-link.dropdown-toggle(id='aboutUs', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') About Us
+            .dropdown-menu(aria-labelledby='aboutUs')
+              a.dropdown-item(href="/gb_yyc") GB Calgary
+              a.dropdown-item(href="/instructors") Instructors
+          li.nav-item.dropdown.ml-3
+            a.nav-link.dropdown-toggle(id='programs', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Programs
+            .dropdown-menu(aria-labelledby='programs')
+              a.dropdown-item(href="/adults") Adults
+              a.dropdown-item(href="/kids") Kids
+              a.dropdown-item(href="/privatelessons") Private Lessons
+          li.nav-item.ml-3: a.nav-link(href="/events") Events & News
+          li.nav-item.ml-3: a.nav-link(href="/gallery") Gallery
+          li.nav-item.ml-3: a.nav-link(href="/contact") Contact
         
-      a.btn.btn-primary.btn-lg(href="/register") GET A FREE INTRO CLASS        
+        a.btn.btn-primary.btn-lg.ml-3.text-white(href="/register") GET A FREE INTRO CLASS
+
+        

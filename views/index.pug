@@ -1,5 +1,21 @@
 extends layout
 
 block content
-    
-  
+  section#slides
+    #carousel.carousel-slide.carousel-fade(data-ride="carousel")
+      .carousel-inner
+        .carousel-item.min-vh-60.min-vh-md-100.active
+          .container
+            .carousel-caption.carousel-caption-center
+              h2 Gracie Barra Calgary
+          .carousel-bg(
+            style="background-image: url('/images/index/gb_one.jpg');"
+          )
+        .carousel-item.min-vh-60.min-vh-md-100
+          .carousel-bg(
+            style="background-image: url('/images/index/gb_two.jpg');"
+          )
+        .carousel-item.min-vh-60.min-vh-md-100
+          .carousel-bg(
+            style="background-image: url('/images/index/gb_three.jpg');"
+          )
