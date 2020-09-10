@@ -16,19 +16,11 @@ db.once('open', function() {
     console.log('db connected.');
 });
 
-var indexRouter = require('./routes/index');
+var basicRouter = require('./routes/basicRoutes');
 var accountsRouter = require('./routes/accounts');
-var gb_yycRouter = require('./routes/gb_yyc');
-var contactRouter = require('./routes/contact');
-var instructorsRouter = require('./routes/instructors');
-var adultsRouter = require('./routes/adults');
-var kidsRouter = require('./routes/kids');
-var privatelessonsRouter = require('./routes/privatelessons');
-var eventsRouter = require('./routes/events');
-var galleryRouter = require('./routes/gallery');
-var scheduleRouter = require('./routes/schedule');
 
 var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -46,17 +38,9 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', basicRouter);
 app.use('/', accountsRouter);
-app.use('/', gb_yycRouter);
-app.use('/', instructorsRouter);
-app.use('/', adultsRouter);
-app.use('/', kidsRouter);
-app.use('/', privatelessonsRouter);
-app.use('/', eventsRouter);
-app.use('/', galleryRouter);
-app.use('/', contactRouter);
-app.use('/', scheduleRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

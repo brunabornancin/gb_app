@@ -6383,7 +6383,7 @@ body {
   background: #991b1e;
   color: #ffffff; }
 
-@media (min-width: 768px) {
+@media (min-width: 400px) {
   .min-vh-60 {
     min-height: 60vh !important; } }
 
