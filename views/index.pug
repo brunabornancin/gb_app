@@ -1,21 +1,79 @@
 extends layout
 
 block content
-  section#slides
-    #carousel.carousel-slide.carousel-fade(data-ride="carousel")
-      .carousel-inner
-        .carousel-item.min-vh-60.min-vh-md-100.active
-          .container
-            .carousel-caption.carousel-caption-center
-              h2 Gracie Barra Calgary
-          .carousel-bg(
-            style="background-image: url('/images/index/gb_one.jpg');"
-          )
-        .carousel-item.min-vh-60.min-vh-md-100
-          .carousel-bg(
-            style="background-image: url('/images/index/gb_two.jpg');"
-          )
-        .carousel-item.min-vh-60.min-vh-md-100
-          .carousel-bg(
-            style="background-image: url('/images/index/gb_three.jpg');"
-          )
+  #top.main-banner
+    video#bg-video(autoplay='' muted='' loop='')
+      source(src='images/home/intro.mp4' type='video/mp4')
+    .video-overlay.header-text
+      .caption
+        h6 Be part of the
+        h2 Gracie Barra family
+        br
+        .main-button.scroll-to-section
+          a(href='/register') Become a member
+
+  section#features.section
+    .container
+      .row
+        .col-lg-6.offset-lg-3
+          .section-heading
+            h2 
+              | Why 
+              em Gracie Barra?
+            br
+            p Gracie Barra nurtures your independent thinking, supports your fighting spirit, and helps you achieve your personal martial art goals!
+        .col-lg-6
+          ul.features-items
+            li.feature-item
+              .left-icon 
+                img(src='/images/features-icon.jpg' alt='Community')
+              .right-content
+                h4 GB Community
+                p When you join Gracie Barra, you become part of a community united by the ideals of the Jiu-Jitsu lifestyle. A fun and exciting calendar of activities for you and your family.
+            li.feature-item
+              .left-icon
+                img(src='/images/features-icon.jpg' alt='Family')
+              .right-content
+                h4 Environment for the whole family
+                p GB is proud to be a powerhouse with the most stalwart champions of Jiu-Jitsu in the world while still maintaining a training environment that is welcoming for the whole family.
+            li.feature-item
+              .left-icon
+                img(src='/images/features-icon.jpg' alt='Techniques')
+              .right-content
+                h4 GB Fighting Techniques
+                p You don’t come to class just to learn how to fight. You work hard toward mastering the underlying principles that can bring more balance and help you reach your true potential outside the mats.     
+        .col-lg-6
+          ul.features-items
+            li.feature-item
+              .left-icon
+                img(src='/images/features-icon.jpg' alt='World')
+              .right-content
+                h4 You can train all over the world
+                p There are over 700 Gracie Barra Schools worldwide. When you join a Gracie Barra school you are free to train at any location while traveling.
+            li.feature-item
+              .left-icon
+                img(src='/images/features-icon.jpg' alt='Experience')
+              .right-content
+                h4 More than 30 years of experience
+                p Our team are trained in the teaching philosophy and methods of Master Carlos Gracie Jr. A legacy of over 30 years of experience is at your service, so you and your family are in great hands.
+            li.feature-item
+              .left-icon
+                img(src='/images/features-icon.jpg' alt='Techniques')
+              .right-content
+                h4 Unity, Pride
+                p The proud is stamped on the Red Shield. “Red represents heart, blood, and love. All my students fight with heart, have GB Jiu-Jitsu in their blood, and they love our team!” – Master Carlos Gracie Jr.
+               
+  section#call-to-action.section
+    .container
+      .row
+        .col-lg-10.offset-lg-1
+          .cta-content
+            h2
+              | Don't 
+              em think
+              | , begin 
+              em today
+              | !
+            p The benefits of martial arts are far reaching and will touch every aspect of your life.
+            .main-button
+              a(href='/register') Become a member

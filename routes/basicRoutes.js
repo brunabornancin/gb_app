@@ -5,40 +5,36 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Gracie Barra Calgary' });
 });
 
-router.get('/gb_yyc', function(req, res, next) {
-  res.render('gb_yyc', { title: 'GB Calgary' });
+router.get('/about-us/gb-yyc', function(req, res, next) {
+  res.render('about-us/gb-yyc', { title: 'GB Calgary' });
 });
 
-router.get('/instructors', function(req, res, next) {
-  res.render('instructors', { title: 'Instructors' });
+router.get('/about-us/instructors', function(req, res, next) {
+  res.render('about-us/instructors', { title: 'Instructors' });
 });
 
-router.get('/adults', function(req, res, next) {
-  res.render('adults', { title: 'Adults' });
+router.get('/programs/adults', function(req, res, next) {
+  res.render('programs/adults', { title: 'Adults' });
 });
 
-router.get('/kids', function(req, res, next) {
-  res.render('kids', { title: 'Kids & Teens' });
+router.get('/programs/kids', function(req, res, next) {
+  res.render('programs/kids', { title: 'Kids & Teens' });
 });
 
-router.get('/privatelessons', function(req, res, next) {
-  res.render('privatelessons', { title: 'Private Lessons' });
+router.get('/programs/privatelessons', function(req, res, next) {
+  res.render('programs/privatelessons', { title: 'Private Lessons' });
 });
 
-router.get('/events', function(req, res, next) {
-  res.render('events', { title: 'Events & News' });
+router.get('/gallery/gallery', function(req, res, next) {
+  res.render('gallery/gallery', { title: 'Gallery' });
 });
 
-router.get('/gallery', function(req, res, next) {
-  res.render('gallery', { title: 'Gallery' });
+router.get('/contact/contact', function(req, res, next) {
+  res.render('contact/contact', { title: 'Contact Us' });
 });
 
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact Us' });
-});
-
-router.get('/schedule', function(req, res, next) {
-  res.render('schedule', { title: 'Schedule' });
+router.get('/prospects/schedule', function(req, res, next) {
+  res.render('prospects/schedule', { title: 'Schedule' });
 });
 
 module.exports = router;

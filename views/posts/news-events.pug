@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  #top.main-pages
+    .bg-pages#events
+    .image-overlay.header-text
+      .caption
+        h2 News & Events
+
+  section#pages
+    .container
+      .row
+        .col-lg-2
+          .posts-item-img
+            .right-content
+              each post in posts
+                figure.figure
+                  img(src=post.img).img-thumbnail
+                  figcaption.figure-caption= post.title
+              else
+                p No posts available
