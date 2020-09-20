@@ -6,6 +6,7 @@ var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 
 var mongoose = require('mongoose')
+mongoose.set('useCreateIndex', true)
 mongoose.connect('mongodb://localhost/gb_app', {
     useNewUrlParser: true,
     useUnifiedTopology: true

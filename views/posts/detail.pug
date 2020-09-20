@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+
+  section#news-detail
+    .container
+      .row
+          .col-md-8.col-sm-7
+            .news-detail-thumb
+              .news-image
+                img.img-responsive(src=post.image)
+              h3=post.headline,
+              p=post.fulltext

@@ -12,6 +12,7 @@ var prospectSchema = new Schema({
     },
     username: {
         type: String,
+        unique: true,
         lowercase: true,
         trim: true,
         required: [true, 'Email is required.'],
@@ -25,9 +26,10 @@ var prospectSchema = new Schema({
         type: String,
         required: true
     },
-},
-{
-   timestamps: true
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 
 var Prospect = mongoose.model('Prospect', prospectSchema);

@@ -2,12 +2,16 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var postSchema = new Schema({
-    title: { 
+    headline: { 
         type: String,
         unique: true,
         required: true
     },
-    description: {
+    abstract: {
+        type: String,
+        required: true
+    },
+    fulltext: {
         type: String,
         required: true
     },
@@ -15,13 +19,18 @@ var postSchema = new Schema({
         type: String,
         required: true
     },
-    img: {        
+    image: {        
         type: String,
         required: true
     },
-},
-{
-   timestamps: true
+    author: {
+        type: String,
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 
 var Post = mongoose.model('Post', postSchema);

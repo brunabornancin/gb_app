@@ -1,12 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
+
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Gracie Barra Calgary' });
 });
 
 router.get('/about-us/gb-yyc', function(req, res, next) {
-  res.render('about-us/gb-yyc', { title: 'GB Calgary' });
+  res.render('about-us/gb-yyc', { title: 'Gracie Barra Calgary' });
 });
 
 router.get('/about-us/instructors', function(req, res, next) {
