@@ -1,25 +1,48 @@
 extends ../layout
 
 block content
+  
   .container
     .row
-      .col.section-heading
-        h2 
-          em Kids
+      .col-md-12
+        .section-heading
+          h2 
+            em Kids
+          br
+          p Our Gracie Barra Kids Program is designed to teach children self-discipline as well as providing a unique way to express themselves.
+          br
+          ul Benefits
+            li Improve social skills and enhance self-confidence
+            li Learn a better understanding of goal-setting and achieving
+            li Increase focus, energy and concentration
+            li Self-defense
+
+  .container
+    .row.text-center
+      .col-md-12
+        h4 Calgary's Future Champions Program
         br
-        p Our Gracie Barra Kids Program is designed to teach children self-discipline as well as providing a unique way to express themselves.
-        br
-        ul Benefits
-          li Improve social skills and enhance self-confidence
-          li Learn a better understanding of goal-setting and achieving
-          li Increase focus, energy and concentration
-          li Self-defense
-        br
-        ul What ages does the Gracie Barra Calgary's Future Champions Program suport?
-          li Tiny Champions I (3-4 years old)
-          li Little Champions I (5-6 years old)
-          li Little Champions 2 (7-9 Years Old)
-          li Juniors & Teens (10-13 years old)
+    .row.text-center
+      .col-md-3
+        .kids-icon
+            img(src='/images/features-icon.jpg' alt='Community')
+        h6 Tiny Champions
+        p 3 - 4 years old
+      .col-md-3
+        .kids-icon
+            img(src='/images/features-icon.jpg' alt='Community')
+        h6 Little Champions I
+        p 5 - 6 years old
+      .col-md-3
+        .kids-icon
+            img(src='/images/features-icon.jpg' alt='Community')
+        h6 Little Champions II
+        p 7 - 9 years old
+      .col-md-3
+        .kids-icon
+            img(src='/images/features-icon.jpg' alt='Community')
+        h6 Juniors & Teens
+        p 10 - 13 years old
 
   section#phrases
     .container
