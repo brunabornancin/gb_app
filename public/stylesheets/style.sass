@@ -3,7 +3,7 @@
 
 //***** General *****//
 
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, em, font, img, strong, ol, ul, li, figure, header, nav, section, footer, figcaption
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, q, a, em, font, img, strong, ol, ul, li, figure, header, nav, section, footer, figcaption
   margin: 0;
   padding: 0;
   border: 0;
@@ -28,8 +28,8 @@ h1, h2, h3, h4, h5, h6
   margin-top: 0px;
   margin-bottom: 0px;
 
-p 
-  font-size: 14px;
+p, q
+  font-size: 15px;
   line-height: 25px;
   color: #333333;
 
@@ -43,7 +43,7 @@ li
   font-size: 14px;
 
 .section-heading 
-  text-align: center;
+  text-align: left;
   margin-top: 110px;
   margin-bottom: 80px;
 
@@ -55,15 +55,16 @@ li
   letter-spacing: 0.5px;
   margin-top: 50px;
   margin-bottom: 0px;
+  text-align: center
 
-.section-heading h2 em 
+.section-heading em 
   font-style: normal;
   color: #991b1e;
 
 .section-heading p 
   margin-top: 10px;
   margin-bottom: 5px;
-  text-align: center;
+  text-align: left;
 
 #pages
   margin-bottom: 80px;
@@ -258,60 +259,62 @@ li
 
 //** Instructors **//
 
-#instructors .instructor-item
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+.team-thumb 
+  background: #e5e5e5;
+  position: relative;
+  overflow: hidden;
+
+.team-info
+  position: relative;
   padding: 40px;
 
-#instructors .instructor-item img 
-  width: 100%;
-  border-radius: 5px;
+.team-info h2 {margin: 0;}
 
-#instructors .instructor-item h4 
-  font-size: 19px;
-  font-weight: 600;
-  color: #232d39;
-  letter-spacing: 0.5px;
-  margin-bottom: 18px;
+.team-thumb img
+  width: 100%;
+
+
+//** Phrases **//
+
+#phrases 
+  padding: 120px;
+  margin-top: 70px;
+  background-color: #333333;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+.phrases-content h2,
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+
+.phrases-content p 
+  font-size: 16px;
+  color: #ffffff;
 
 
 //** News & Events **//
 
 .news-thumb 
-  background: #cecece;
+  background: #f2f2f2;
   
 .news-thumb img 
   border-radius: 0px 0px 0 0;
   width: 350px;
 
-a.news
-  display: inline-block;
-  height: 160px;
-
 .news-info 
-  padding: 30px;
+  padding: 20px;
   text-align: justify;
   
-.news-info span 
-  display: block;
-  letter-spacing: 0.5px;
-
-.news-info a, 
-.news-info h3
+.card-title, 
   color: #991b1e;
   font-size: 16px;
   text-align: center;
   text-transform: uppercase;
-
-#news-detail blockquote
-    margin: 30px 0;
-
-.news-detail-thumb .news-image img 
-  border-radius: 10px;
-  
-.news-detail-thumb h3
-  margin-bottom: 8px;
 
 .news-image 
   margin-bottom: 30px;
@@ -319,107 +322,6 @@ a.news
 
 .news-image img 
   width: 100%;
-
-.news-detail-thumb ul 
-  margin: 32px 12px 22px 0px;
-
-.news-detail-thumb ul li 
-  list-style: circle;
-  font-weight: normal;
-  padding: 6px 12px 6px 0px;
-
-.news-sidebar 
-  margin-top: 16px;
-
-.news-social-share 
-  text-align: center;
-  padding-top: 22px;
-
-.news-social-share .btn 
-  border-radius: 100px;
-  border: none;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 2px 6px;
-  padding: 8px 14px;
-
-.news-social-share .btn-primary 
-  background: #3b5998;
-
-.news-social-share .btn-success 
-  background: #1da1f2;
-
-.news-social-share .btn-danger 
-  background: #dd4b39;
-
-.news-social-share a .fa 
-  padding-right: 4px;
-
-.recent-post 
-  padding-top: 2px;
-  padding-bottom: 18px;
-
-.recent-post .media img 
-  border-radius: 100%;
-  width: 80px;
-  height: 80px;
-  margin-right: 5px;
-
-.recent-post .media-heading 
-  font-size: 16px;
-  font-weight: 500;
-  line-height: inherit;
-  margin-top: 5px;
-
-.news-categories 
-  margin-top: 8px;
-
-.news-categories li a 
-  color: #2b2b2b;
-
-.news-ads 
-  background: #ffffff;
-  border-right: 4px solid #2b2b2b;
-  padding: 42px;
-  text-align: center;
-  margin: 26px 0 26px 0;
-
-.news-ads.sidebar-ads 
-  border-left: 4px solid #2b2b2b;
-  border-right: 0px;
-
-.news-ads h4 
-  font-size: 18px;
-
-.news-tags h4 
-  padding-bottom: 6px;
-
-.news-categories li,
-.news-tags li 
-  list-style: none;
-  display: inline-block;
-  margin: 4px;
-
-.news-tags li a 
-  background: #393939;
-  border-radius: 50px;
-  color: #ffffff;
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 500;
-  text-decoration: none;
-  float: left;
-  min-width: 30px;
-  padding: 6px 12px;
-  -webkit-transition: all ease-in-out 0.4s;
-  transition: all ease-in-out 0.4s;
-
-.news-tags li a:hover 
-  background: #4267b2;
-
-
-//***** Contact *****//
-
 
 
 //***** Footer *****//

@@ -1,7 +1,7 @@
 extends ../layout
 
 block content
-  section#pages.section
+
     .container
       .row
         .col
@@ -9,7 +9,7 @@ block content
             h2 
               em We'd love to hear from you!
       .row
-        .col-lg-6
+        .col-md-3
           strong Gracie Barra Calgary
           br
           | Calgary, Canada
@@ -17,9 +17,15 @@ block content
           | (xxx) xxx-xxxx
           br
           a(href='mailto:info@gbcalgary.com') info@gbcalgary.com
-        .col-lg-6
+          br
+          br
           strong Office Hours
           br
           | Monday - Friday: 7AM - 8PM
           br
           | Saturday: 9AM - 1PM
+          br
+
+        .col.md-3
+          #map
+            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2512.278575059786!2d-114.07366408404226!3d50.97404125737941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537170103d0d7a79%3A0x35adfec8f1d4b87!2sMacleod%20Trail%2C%20Calgary%2C%20AB!5e0!3m2!1sen!2sca!4v1600649987392!5m2!1sen!2sca' width='100%' height='300px' frameborder='0' style='border:0' allowfullscreen='')

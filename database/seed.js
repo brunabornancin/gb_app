@@ -26,7 +26,7 @@ var data = [
         'documents': [
             {
               headline: "Women's Self-Defence Seminar",
-              abstract: 'Spend time with the Gracie Barra Pink Team and get a chance to win a pink team basket!',
+              abstract: 'Spend time with the Gracie Barra Pink Team!',
               fulltext: 'If your Saturday is not yet completely booked for other things, mark it as a Gracie Barra day. Spend time with the Gracie Barra Pink Team and get a chance to win a pink team basket! Also, Saturday marks the UFC”s very first women’s title fight. UFC Bantamweight Ronda Rousey takes on Liz Carmouche for the undisputed women’s bantamweight title of the world! Join the men and women of Gracie Barra for a great time this Saturday!',
               category: 'Seminar',
               image: '../images/posts/women.png',

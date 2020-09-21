@@ -1,7 +1,6 @@
 extends ../layout
 
 block content
-  section#pages
     .container
       .row
         .col
@@ -18,5 +17,5 @@ block content
                 .card-title.news-info= post.headline
                 .card-subtitle.text-muted.mb-2= post.createdAt.toLocaleDateString('en-CA')
                 .card-text.mb-2= post.abstract
-                a.btn.btn-primary(href='detail/post.id') Read More
+                a.btn.btn-primary.mt-2(href='detail/post.id') Read More
 
