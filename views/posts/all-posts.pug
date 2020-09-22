@@ -1,7 +1,13 @@
 extends ../layout
 
 block content
-  
+
+  #top.main-pages
+    .bg-pages#events
+    .image-overlay.header-text
+      .caption
+        h2=title
+
   .container
     .row
       .col-md-12
@@ -11,12 +17,12 @@ block content
   .container
     .row
       each post in posts
-        .col-md-4.col-sm-6.mt-4
+        .col-md-4.mt-4
           .card-mt-4
             .card-body.news-thumb
               img(src=post.image).img-thumbnail
               .card-title.news-info= post.headline
               .card-subtitle.text-muted.mb-2= post.createdAt.toLocaleDateString('en-CA')
               .card-text.mb-2= post.abstract
-              a.btn.btn-primary.mt-2(href='detail/post.id') Read More
+              a.btn.btn-primary.mt-2(href='/posts/detail' + post.id) Read More
 

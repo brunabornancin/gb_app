@@ -9,10 +9,10 @@ router.get('/posts/all-posts', function(req, res, next) {
     });
 });
 
-router.get('/:id', function(req, res) {
-    var Post = Post.findById(req.params.id, function(error, post) {
+router.get('/post/:id', function(req, res) {
+    Post.findById(req.params.id, function(error, post) {
         if(err) console.log(err);
-        res.render('detail/post.id', { post: post})
+        res.render('post/detail' + post.id, { post: post})
     });
 });
 
