@@ -6668,12 +6668,15 @@ li {
 
 .card-title {
   color: #991b1e;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   text-transform: uppercase; }
 
-.card-subtitle, text {
-  font-size: 13px; }
+.card-text {
+  font-size: 14px; }
+
+.card-subtitle {
+  font-size: 14px; }
 
 .news-image {
   margin-bottom: 30px;

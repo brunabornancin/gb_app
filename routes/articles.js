@@ -8,11 +8,11 @@ router.get('/articles/new', (req, res) => {
 
 router.get('/articles/:slug', async (req, res) => {
 	var article = await Article.findOne({ slug: req.params.slug })
-	if (article == null) res.redirect('/')
+	if (article == null) res.redirect('/articles')
 	res.render('articles/show', {article:article})
 })
 
-router.post('/articles/', async (req, res) =>{
+router.post('/articles', async (req, res) =>{
 	var article = new Article({
 		title: req.body.title,
 		description: req.body.description,

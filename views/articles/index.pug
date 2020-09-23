@@ -17,10 +17,10 @@ block content
 	.container
 		.row
 			each article in articles
-				.col-md-4
+				.col-md-4.mt-4
 					.card-mt-4
 						.card-body.news-thumb
-							.card-title.mt-4=article.title
-							.card-subtitle.text-muted.mt-4=article.createdAt.toLocaleDateString('en-CA')
-							.card-text.mt-4=article.description
-							a.btn.btn-primary.mt-4(href='/articles/article.slug') Read More
+							.card-title=article.title
+							.card-subtitle.text-muted.mb-2=article.createdAt.toLocaleDateString('en-CA')
+							.card-text.mb-2=article.description
+							a.btn.btn-primary.mt-4(href="articles/article.slug") Read More
