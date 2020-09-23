@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+
+	#top.main-pages
+		.bg-pages#events
+		.image-overlay.header-text
+			.caption
+				h2 News & Events
+
+	.container
+		.row
+			.col-md-12
+				.section-heading
+					h2 Latest News
+
+	.container
+		.row
+			each article in articles
+				.col-md-4
+					.card-mt-4
+						.card-body.news-thumb
+							.card-title.mt-4=article.title
+							.card-subtitle.text-muted.mt-4=article.createdAt.toLocaleDateString('en-CA')
+							.card-text.mt-4=article.description
+							a.btn.btn-primary.mt-4(href='/articles/article.slug') Read More

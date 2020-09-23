@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+
+	#top.main-pages
+		.bg-pages#events
+		.image-overlay.header-text
+			.caption
+				h2 News & Events
+
+	.container
+		.row
+			.col-md-12
+				h1.mt-5=article.title
+				p.text-muted.mt-4=article.createdAt.toLocaleDateString('en-CA')
+				a.btn.btn-primary.mt-4(href='/articles') All Posts
+
+				p.mt-4=article.markdown

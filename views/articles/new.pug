@@ -1,0 +1,34 @@
+extends ../layoutHome
+
+block content
+	.section#form
+		.container
+			h1 New Article
+
+			form(action="/articles" method="POST")
+				.form-group
+					label(for="title") Title
+					input.form-control#title(
+						name="title"
+						type="text"
+						value=article.title
+						required=true
+					)
+
+				.form-group
+					label(for="description") Description
+					textarea.form-control#description(
+						name="description"
+						value=article.description
+						required=true
+					)
+
+				.form-group
+					label(for="markdown") Markdown
+					textarea.form-control#markdown(
+						name="markdown"
+						value=article.markdown
+						required=true
+					)
+
+				button.btn.btn-primary(type="submit") Save

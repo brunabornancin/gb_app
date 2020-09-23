@@ -6,10 +6,11 @@ var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 
 var mongoose = require('mongoose')
-mongoose.set('useCreateIndex', true)
-mongoose.connect('mongodb://localhost/gb_app', {
+
+mongoose.connect('mongodb://localhost/gb_yyc', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
 });
 
 var db = mongoose.connection;
@@ -20,7 +21,8 @@ db.once('open', function() {
 
 var basicRouter = require('./routes/basicRoutes');
 var prospectsRouter = require('./routes/prospects');
-var postsRouter = require('./routes/posts');
+var Article = require('./models/article')
+var articleRouter = require('./routes/articles');
 
 var app = express();
 
@@ -41,9 +43,14 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/articles/', async (req, res) => {
+	var articles = await Article.find().sort({createdAt: 'desc'})
+	res.render('articles/index', {articles: articles})
+});
+
 app.use('/', basicRouter);
 app.use('/', prospectsRouter);
-app.use('/', postsRouter);
+app.use('/', articleRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
