@@ -7,7 +7,7 @@ var sassMiddleware = require('node-sass-middleware');
 
 var mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/gb_app', {
+mongoose.connect('mongodb://localhost/gb_yyc', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
